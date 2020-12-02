@@ -4,14 +4,14 @@ import React from 'react';
 import SignIn from './pages/SignIn';
 import GlobalStyle from './styles/global';
 
-import AuthContext from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
 
 const App: React.FC = () => (
   <>
     <GlobalStyle />
-    <AuthContext.Provider value={{ name: 'Kallel' }}>
+    <AuthProvider>
       <SignIn />
-    </AuthContext.Provider>
+    </AuthProvider>
   </>
 );
 
